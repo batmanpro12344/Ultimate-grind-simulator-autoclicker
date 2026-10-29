@@ -21,16 +21,6 @@ Install the Windows release setup EXE, launch the app, then use shortcuts. Some 
 
 For development: `py -3 -m pip install -r requirements.txt` then `py -3 app.py`.
 
-## Publish a public download link in Discord
-1. Create a GitHub repository and upload **all project files**, including `.github/workflows/release.yml`.
-2. Open **Actions → Windows installer → Run workflow**. This builds a downloadable artifact for testing.
-3. When satisfied, create and push tag `v1.0.0` to trigger the workflow and publish a **GitHub Release** automatically. (Example: `git tag v1.0.0` then `git push origin v1.0.0`.)
-4. Copy the EXE link from **Releases → v1.0.0 → Assets** to your Discord server.
-5. Share the SHA256SUMS.txt file. Verify downloaded EXEs using Windows `Get-FileHash .\filename.exe -Algorithm SHA256`.
-
-GitHub Release URL pattern (replace USER and REPO):
-`https://github.com/USER/REPO/releases/download/v1.0.0/UltimateGrindAutoClicker-Setup-v1.0.0.exe`
-
 ## Security / distribution notes
 - Releases are **unsigned**. Windows SmartScreen might warn about unfamiliar executables; source availability and hashes are useful but do not replace code signing, malware scanning, and real Windows testing.
 - Do not claim this is official Roblox software.
